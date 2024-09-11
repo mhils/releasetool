@@ -1,0 +1,14 @@
+#!/usr/bin/env -S python3 -u
+import logging
+
+from releaser import git_push
+from releaser import git_tag
+from releaser import status_check
+
+logger = logging.getLogger(__name__)
+
+if __name__ == "__main__":
+    status_check()
+    git_tag()
+    git_push()
+    logger.info("✅ All done. 🥳")
