@@ -2,7 +2,7 @@
 import logging
 import subprocess
 
-from .common import branch, get_tag_name
+from .common import branch, get_tag_names
 
 logger = logging.getLogger(__name__)
 
@@ -12,7 +12,7 @@ def git_push(*identifiers: str):
     if not identifiers:
         identifiers = [
             branch,
-            get_tag_name(),
+            *get_tag_names(),
         ]
     subprocess.check_call(["git", "push", "--atomic", "origin", *identifiers])
 

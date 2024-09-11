@@ -4,7 +4,7 @@ from .common import (
     branch,
     get_version,
     get_next_dev_version,
-    get_tag_name,
+    get_tag_names,
 )
 from .git_commit import git_commit
 from .git_push import git_push
@@ -19,7 +19,7 @@ __all__ = [
     "branch",
     "get_version",
     "get_next_dev_version",
-    "get_tag_name",
+    "get_tag_names",
     "git_commit",
     "git_push",
     "git_tag",

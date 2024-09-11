@@ -57,8 +57,16 @@ def get_next_dev_version() -> str:
     return ".".join(version) + "-dev"
 
 
-def get_tag_name() -> str:
-    return f"{os.environ.get('GIT_TAG_PREFIX', '')}{get_version()}"
+def get_tag_names() -> list[str]:
+    """
+    Returns v1.2.3, v1.2, v1
+    """
+    tags = []
+    tag = f"{os.environ.get('GIT_TAG_PREFIX', 'v')}{get_version()}"
+    while tag:
+        tags.append(tag)
+        tag = tag.rpartition(".")[0]
+    return tags
 
 
 def http_get(url: str) -> http.client.HTTPResponse:
