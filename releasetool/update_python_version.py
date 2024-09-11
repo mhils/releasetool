@@ -4,8 +4,8 @@ import re
 import sys
 from pathlib import Path
 
-from .common import project
-from .common import get_version
+from releasetool.common import get_version
+from releasetool.common import project
 
 logger = logging.getLogger(__name__)
 

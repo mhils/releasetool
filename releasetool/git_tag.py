@@ -2,7 +2,7 @@
 import logging
 import subprocess
 
-from .common import get_tag_names
+from releasetool.common import get_tag_names
 
 logger = logging.getLogger(__name__)
 

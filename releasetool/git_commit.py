@@ -3,7 +3,8 @@ import logging
 import subprocess
 import sys
 
-from .common import project, get_version
+from releasetool.common import get_version
+from releasetool.common import project
 
 logger = logging.getLogger(__name__)
 

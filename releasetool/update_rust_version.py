@@ -5,7 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .common import get_version
+from releasetool.common import get_version
 
 logger = logging.getLogger(__name__)
 

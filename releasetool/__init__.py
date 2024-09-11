@@ -1,11 +1,9 @@
-from .common import (
-    github_repository,
-    project,
-    branch,
-    get_version,
-    get_next_dev_version,
-    get_tag_names,
-)
+from .common import branch
+from .common import get_next_dev_version
+from .common import get_tag_names
+from .common import get_version
+from .common import github_repository
+from .common import project
 from .git_commit import git_commit
 from .git_push import git_push
 from .git_tag import git_tag

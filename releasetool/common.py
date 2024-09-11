@@ -1,9 +1,9 @@
+import http.client
+import json
+import logging
 import os
 import re
 import subprocess
-import logging
-import http.client
-import json
 
 logging.basicConfig(format="[%(asctime)s] %(message)s", level=logging.INFO)
 

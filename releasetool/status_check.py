@@ -3,7 +3,9 @@ import logging
 import os
 import subprocess
 
-from .common import branch, github_repository, http_get_json
+from releasetool.common import branch
+from releasetool.common import github_repository
+from releasetool.common import http_get_json
 
 logger = logging.getLogger(__name__)
 
