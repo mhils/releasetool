@@ -19,9 +19,9 @@ def update_rust_version(version: str = ""):
     (
         ^\[(?:workspace\.)?package]\n # [package] or [workspace.package] toml block
         (?:(?!\[).*\n)*               # lines not starting a new section
-        version[ \t]*=[ \t]*"         # beginning of the version line
+        version[ \t]*=[ \t]*["']         # beginning of the version line
     )
-    [^"]+
+    [^"']+
     """,
         rf"\g<1>{version or get_version()}",
         cl,
