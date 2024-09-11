@@ -14,7 +14,7 @@ def git_push(*identifiers: str):
             branch,
             *get_tag_names(),
         ]
-    subprocess.check_call(["git", "push", "--atomic", "origin", *identifiers])
+    subprocess.check_call(["git", "push", "-f", "--atomic", "origin", *identifiers])
 
 
 if __name__ == "__main__":
