@@ -1,5 +1,5 @@
-name: 'Setup releaser...'
-description: 'Setup release scripts'
+name: 'Setup releasetool'
+description: 'Setup releasetool'
 
 runs:
   using: "composite"

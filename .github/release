@@ -1,9 +1,9 @@
 #!/usr/bin/env -S python3 -u
 import logging
 
-from releaser import git_push
-from releaser import git_tag
-from releaser import status_check
+from releasetool import git_push
+from releasetool import git_tag
+from releasetool import status_check
 
 logger = logging.getLogger(__name__)
 
