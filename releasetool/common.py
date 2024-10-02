@@ -66,6 +66,7 @@ def get_tag_names() -> list[str]:
     while tag:
         tags.append(tag)
         tag = tag.rpartition(".")[0]
+    tags = [t for t in tags if t != "v0"]
     return tags
 
 
