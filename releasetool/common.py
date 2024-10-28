@@ -52,8 +52,11 @@ def get_next_dev_version() -> str:
     version = get_version().split(".")
     if version[0] == "0":
         version[1] = str(int(version[1]) + 1)
+        version[2] = "0"
     else:
         version[0] = str(int(version[0]) + 1)
+        version[1] = "0"
+        version[2] = "0"
     return ".".join(version) + "-dev"
 
 
